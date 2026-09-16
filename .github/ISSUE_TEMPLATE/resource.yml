@@ -1,0 +1,42 @@
+name: Resource submission / 提交资源
+description: Suggest a Microduck resource with evidence / 提供资源和证据
+title: '[Resource] '
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Primary project URL / 一手项目链接
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose and environment / 用途与运行环境
+      description: Include OS, compute requirements and current limitations.
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Evidence type / 证据类型
+      options:
+        - Documentation only / 仅文档
+        - Mock result / Mock 结果
+        - Simulation report / 仿真报告
+        - Physical hardware demonstration / 实物演示
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Evidence links and version / 证据链接与版本
+      description: Link logs, videos or a release; distinguish your tests from author claims.
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Your relationship to this project / 与项目的关系
+      placeholder: Author, contributor, user, or none
+    validations:
+      required: true

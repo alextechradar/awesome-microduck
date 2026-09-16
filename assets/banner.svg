@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+<title id="title">Awesome Microduck</title><desc id="desc">A field guide from first simulation to robot experiments.</desc>
+<rect width="1280" height="400" rx="24" fill="#102c30"/>
+<g fill="none" stroke="#255057"><path d="M0 320H1280M0 240H1280M0 160H1280M0 80H1280M800 0V400M880 0V400M960 0V400M1040 0V400M1120 0V400M1200 0V400"/></g>
+<text x="64" y="74" fill="#a6d5c3" font-family="sans-serif" font-size="18" letter-spacing="4">THE COMMUNITY FIELD GUIDE</text>
+<text x="60" y="164" fill="#fff5d9" font-family="sans-serif" font-weight="700" font-size="66">Awesome</text>
+<text x="60" y="240" fill="#f6ca69" font-family="sans-serif" font-weight="700" font-size="66">Microduck</text>
+<text x="64" y="310" fill="#d0e2dd" font-family="sans-serif" font-size="22">Discover. Simulate. Train. Build.</text>
+<text x="64" y="355" fill="#a6d5c3" font-family="sans-serif" font-size="16">EN / 中文 · Practical routes · Source-reviewed resources</text>
+<g transform="translate(835 60)"><rect x="56" y="25" width="164" height="120" rx="38" fill="#fff5d9"/><path d="M216 75h65v36h-65" fill="#f6ca69"/><circle cx="175" cy="67" r="10" fill="#102c30"/><rect x="91" y="137" width="85" height="65" rx="16" fill="#a6d5c3"/><path d="M105 198v61M162 198v61" stroke="#fff5d9" stroke-width="22"/><path d="M73 270h56M148 270h56" stroke="#f6ca69" stroke-width="20" stroke-linecap="round"/><circle cx="112" cy="174" r="7" fill="#102c30"/><circle cx="155" cy="174" r="7" fill="#102c30"/></g></svg>

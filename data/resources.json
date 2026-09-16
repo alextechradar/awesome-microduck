@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "id": "runtime",
+      "name": "Microduck runtime",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "category": "official",
+      "environment": "Robot / simulation",
+      "status": "official",
+      "description": {
+        "en": "Start here for robot software and operator documentation.",
+        "zh": "机器人运行软件与操作文档总入口。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "rl",
+      "name": "Microduck RL",
+      "url": "https://github.com/pollen-robotics/microduck_rl",
+      "category": "official",
+      "environment": "CUDA",
+      "status": "official",
+      "description": {
+        "en": "Official training workspace; begin with its requirements and live task registry.",
+        "zh": "官方训练工程；先检查环境要求与实时任务列表。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck_rl",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "sandbox",
+      "name": "Microduck Sandbox",
+      "url": "https://huggingface.co/spaces/pollen-robotics/microduck-simulator",
+      "category": "official",
+      "environment": "Browser",
+      "status": "official",
+      "description": {
+        "en": "Try the hosted simulator before choosing a local setup.",
+        "zh": "先在线体验仿真，再决定是否搭建本地环境。"
+      },
+      "source_url": "https://huggingface.co/spaces/pollen-robotics/microduck-simulator",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "policies",
+      "name": "Official policy files",
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies",
+      "category": "official",
+      "environment": "ONNX",
+      "status": "official",
+      "description": {
+        "en": "Find published weights; check the runtime manifest contract before integration.",
+        "zh": "查找已发布权重；接入前对照运行时的 manifest 契约。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "docs",
+      "name": "Documentation index",
+      "url": "https://github.com/pollen-robotics/microduck/blob/main/docs/README.md",
+      "category": "docs",
+      "environment": "Reading",
+      "status": "official",
+      "description": {
+        "en": "Find the relevant operator or developer guide.",
+        "zh": "按操作与开发需求查找上游文档。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck/blob/main/docs/README.md",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "simulation",
+      "name": "Runtime simulation guide",
+      "url": "https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md",
+      "category": "docs",
+      "environment": "Reading",
+      "status": "official",
+      "description": {
+        "en": "Follow the upstream setup for testing the runtime in simulation.",
+        "zh": "按上游指引，在仿真环境中测试运行时。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "cheatsheet",
+      "name": "Robot command reference",
+      "url": "https://github.com/pollen-robotics/microduck/blob/main/docs/robot/cheatsheet.md",
+      "category": "docs",
+      "environment": "Reading",
+      "status": "official",
+      "description": {
+        "en": "Look up commands for the installed runtime version.",
+        "zh": "查阅对应运行时版本的操作命令。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck/blob/main/docs/robot/cheatsheet.md",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "manifest",
+      "name": "Policy manifest reference",
+      "url": "https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md",
+      "category": "docs",
+      "environment": "Reading",
+      "status": "official",
+      "description": {
+        "en": "Check policy metadata and compatibility requirements.",
+        "zh": "核对策略元数据与兼容性要求。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "mac",
+      "name": "Microduck Lab",
+      "url": "https://github.com/jonathanhawkins/microduck-lab",
+      "category": "simulation",
+      "environment": "Apple Silicon / CPU",
+      "status": "simulation-reported",
+      "description": {
+        "en": "Mac-oriented reward experiments with a browser viewer; community implementation.",
+        "zh": "面向 Mac 的奖励设计实验与浏览器可视化；社区实现。"
+      },
+      "source_url": "https://github.com/jonathanhawkins/microduck-lab",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "torch",
+      "name": "microduck-rl-torch",
+      "url": "https://github.com/bsprenger/microduck-rl-torch",
+      "category": "simulation",
+      "environment": "PyTorch / CPU / GPU",
+      "status": "experimental",
+      "description": {
+        "en": "Explore a portable PyTorch implementation; check backend limitations first.",
+        "zh": "探索 PyTorch 移植方案；先阅读各计算后端的限制。"
+      },
+      "source_url": "https://github.com/bsprenger/microduck-rl-torch",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "amd",
+      "name": "Microduck RL on Genesis",
+      "url": "https://github.com/Macmachi/microduck-rl-genesis",
+      "category": "simulation",
+      "environment": "Linux / AMD ROCm",
+      "status": "simulation-reported",
+      "description": {
+        "en": "An AMD-oriented training alternative; follow its tested configuration.",
+        "zh": "面向 AMD 的训练替代方案；使用项目列出的已测试配置。"
+      },
+      "source_url": "https://github.com/Macmachi/microduck-rl-genesis",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "isaac",
+      "name": "isaaclab-microduck",
+      "url": "https://github.com/kabilankb/isaaclab-microduck",
+      "category": "simulation",
+      "environment": "Isaac Lab / CUDA",
+      "status": "experimental",
+      "description": {
+        "en": "Task-port research. The reviewed README reports unsuccessful locomotion; do not select it as a ready walking policy.",
+        "zh": "任务移植研究。核验时 README 明示行走尚未成功，不应作为现成行走策略。"
+      },
+      "source_url": "https://github.com/kabilankb/isaaclab-microduck",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "ros",
+      "name": "MicroDuck ROS 2 + Isaac Sim",
+      "url": "https://github.com/osrbot/microduck-ros2-isaac",
+      "category": "simulation",
+      "environment": "ROS 2 Jazzy / optional Isaac Sim",
+      "status": "simulation-reported",
+      "description": {
+        "en": "Start with the RViz path; use the separate Isaac tutorials when needed.",
+        "zh": "可先走 RViz 路线，再按需学习 Isaac 教程。"
+      },
+      "source_url": "https://github.com/osrbot/microduck-ros2-isaac",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "playground",
+      "name": "Microduck Playground",
+      "url": "https://github.com/Vottivott/microduck-playground",
+      "category": "policies",
+      "environment": "Simulation",
+      "status": "simulation-reported",
+      "description": {
+        "en": "Browse experiment write-ups and their associated policy demonstrations.",
+        "zh": "阅读实验记录与对应策略演示，区分演示条件和部署条件。"
+      },
+      "source_url": "https://github.com/Vottivott/microduck-playground",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "studio",
+      "name": "Microduck Studio",
+      "url": "https://github.com/microai-lab/microduck-studio",
+      "category": "tools",
+      "environment": "Local / Docker launcher",
+      "status": "experimental",
+      "description": {
+        "en": "A development interface joining runtime and simulation; requires sibling repositories.",
+        "zh": "连接运行时与仿真的开发界面；需配套同级仓库。"
+      },
+      "source_url": "https://github.com/microai-lab/microduck-studio",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "mcp",
+      "name": "microduck-mcp",
+      "url": "https://github.com/joeynyc/microduck-mcp",
+      "category": "tools",
+      "environment": "Node.js / mock / simulation",
+      "status": "hardware-unverified",
+      "description": {
+        "en": "Agent interface with mock and simulation paths. Its README states real-device transports have only fake-daemon validation.",
+        "zh": "提供 mock 与仿真路径的 Agent 接口；README 说明真机传输仅经过伪守护进程验证。"
+      },
+      "source_url": "https://github.com/joeynyc/microduck-mcp",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "build",
+      "name": "Microduck build tutorial",
+      "url": "https://github.com/AI-FanGe/Microduck-build-tutorial",
+      "category": "hardware",
+      "environment": "DIY / Raspberry Pi",
+      "status": "hardware-demo-reported",
+      "description": {
+        "en": "Chinese assembly and setup guide with author-published hardware clips; its configuration differs from the official product.",
+        "zh": "中文装机与部署教程，作者提供实物视频；配置与官方产品不同。"
+      },
+      "source_url": "https://github.com/AI-FanGe/Microduck-build-tutorial",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "replica",
+      "name": "Microduck replica",
+      "url": "https://github.com/fanhao375/microduck-replica",
+      "category": "hardware",
+      "environment": "CAD / electronics / DIY",
+      "status": "experimental",
+      "description": {
+        "en": "Reconstruction notes and build logs; check the specific actuator variant and current completion status.",
+        "zh": "逆向结构、电控与装机记录；需区分舵机版本及当前完成状态。"
+      },
+      "source_url": "https://github.com/fanhao375/microduck-replica",
+      "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    }
+  ]
+}

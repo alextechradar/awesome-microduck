@@ -12,6 +12,13 @@
 
 ## 🆕 最新动态
 
+### 2026-09-21
+
+- 📱 核验官方 **[daemon v0.14.1](https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.14.1)**：手机端已可让机器人起立并启动策略；v0.14.0 还将 MuJoCo 数字体切换为真实运行时守护进程驱动。
+- 🌐 收录 **[Microduck Web](https://github.com/TonyRuan/microduck-web)**：支持触控与 ONNX 策略导入的社区浏览器仿真器；不控制实体硬件。
+- 📚 收录 **[OpenMicroDuck](https://github.com/SaberOnGo/open-microduck)**：双语学习与研究指南，区分官方事实、社区重建和待确认问题。
+- 🧰 收录 **[Fanduck](https://github.com/7757/fanduck)**：已完成的社区复刻，提供作者实机演示与制作资料；使用前需核对模型的非商业条款。
+
 ### 2026-09-16
 
 - 🧠 收录 **[microduck-mcp](https://github.com/joeynyc/microduck-mcp)**：支持 mock 与仿真的 Agent 接口；真机传输仍未经过硬件验证。
@@ -51,7 +58,7 @@ Training Recipes；Videos & Tutorials；Research & Experiments。
 ### 官方入口
 
 - [Microduck RL](https://github.com/pollen-robotics/microduck_rl) — 官方训练工程；先检查环境要求与实时任务列表。 **CUDA** · `official` · [来源](https://github.com/pollen-robotics/microduck_rl) · 2026-09-16.
-- [Microduck runtime](https://github.com/pollen-robotics/microduck) — 机器人运行软件与操作文档总入口。 **Robot / simulation** · `official` · [来源](https://github.com/pollen-robotics/microduck) · 2026-09-16.
+- [Microduck runtime](https://github.com/pollen-robotics/microduck) — 官方运行时与操作文档；稳定版 v0.14.1 增加手机起立与策略启动控制。 **Robot / simulation** · `official` · [来源](https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.14.1) · 2026-09-21.
 - [Microduck Sandbox](https://huggingface.co/spaces/pollen-robotics/microduck-simulator) — 先在线体验仿真，再决定是否搭建本地环境。 **Browser** · `official` · [来源](https://huggingface.co/spaces/pollen-robotics/microduck-simulator) · 2026-09-16.
 - [Official policy files](https://huggingface.co/pollen-robotics/microduck-policies) — 查找已发布权重；接入前对照运行时的 manifest 契约。 **ONNX** · `official` · [来源](https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md) · 2026-09-16.
 
@@ -59,9 +66,11 @@ Training Recipes；Videos & Tutorials；Research & Experiments。
 ### 文档
 
 - [Documentation index](https://github.com/pollen-robotics/microduck/blob/main/docs/README.md) — 按操作与开发需求查找上游文档。 **Reading** · `official` · [来源](https://github.com/pollen-robotics/microduck/blob/main/docs/README.md) · 2026-09-16.
+- [Official daemon releases](https://github.com/pollen-robotics/microduck/releases) — 跟踪稳定版 daemon，并与签名开发构建区分。 **Reading / release artifacts** · `official` · [来源](https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.14.1) · 2026-09-21.
+- [OpenMicroDuck](https://github.com/SaberOnGo/open-microduck) — 覆盖仿真、训练与复刻研究的双语社区指南；阅读时保留对来源标签和未决硬件问题的关注。 **Bilingual guide** · `experimental` · [来源](https://github.com/SaberOnGo/open-microduck) · 2026-09-21.
 - [Policy manifest reference](https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md) — 核对策略元数据与兼容性要求。 **Reading** · `official` · [来源](https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md) · 2026-09-16.
 - [Robot command reference](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/cheatsheet.md) — 查阅对应运行时版本的操作命令。 **Reading** · `official` · [来源](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/cheatsheet.md) · 2026-09-16.
-- [Runtime simulation guide](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md) — 按上游指引，在仿真环境中测试运行时。 **Reading** · `official` · [来源](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md) · 2026-09-16.
+- [Runtime simulation guide](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md) — 用真实运行时守护进程驱动 MuJoCo 机体；物理总线和设备驱动不在仿真范围内。 **Reading** · `official` · [来源](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md) · 2026-09-21.
 
 <a id="simulation-and-training"></a>
 ### 仿真与训练
@@ -70,6 +79,7 @@ Training Recipes；Videos & Tutorials；Research & Experiments。
 - [Microduck Lab](https://github.com/jonathanhawkins/microduck-lab) — 面向 Mac 的奖励设计实验与浏览器可视化；社区实现。 **Apple Silicon / CPU** · `simulation-reported` · [来源](https://github.com/jonathanhawkins/microduck-lab) · 2026-09-16.
 - [Microduck RL on Genesis](https://github.com/Macmachi/microduck-rl-genesis) — 面向 AMD 的训练替代方案；使用项目列出的已测试配置。 **Linux / AMD ROCm** · `simulation-reported` · [来源](https://github.com/Macmachi/microduck-rl-genesis) · 2026-09-16.
 - [MicroDuck ROS 2 + Isaac Sim](https://github.com/osrbot/microduck-ros2-isaac) — 可先走 RViz 路线，再按需学习 Isaac 教程。 **ROS 2 Jazzy / optional Isaac Sim** · `simulation-reported` · [来源](https://github.com/osrbot/microduck-ros2-isaac) · 2026-09-16.
+- [Microduck Web](https://github.com/TonyRuan/microduck-web) — 支持触控与策略导入的社区 MuJoCo 和 ONNX 仿真器；不控制实体硬件。 **Browser / mobile / offline cache** · `simulation-reported` · [来源](https://github.com/TonyRuan/microduck-web) · 2026-09-21.
 - [microduck-rl-torch](https://github.com/bsprenger/microduck-rl-torch) — 探索 PyTorch 移植方案；先阅读各计算后端的限制。 **PyTorch / CPU / GPU** · `experimental` · [来源](https://github.com/bsprenger/microduck-rl-torch) · 2026-09-16.
 
 <a id="policy-experiments"></a>
@@ -86,6 +96,7 @@ Training Recipes；Videos & Tutorials；Research & Experiments。
 <a id="hardware-and-diy"></a>
 ### 硬件与复刻
 
+- [Fanduck](https://github.com/7757/fanduck) — 已完成的社区复刻，提供作者实机演示、BOM、打印与板件资料；使用前核对模型的非商业条款。 **DIY / CAD / PCB** · `hardware-demo-reported` · [来源](https://github.com/7757/fanduck) · 2026-09-21.
 - [Microduck build tutorial](https://github.com/AI-FanGe/Microduck-build-tutorial) — 中文装机与部署教程，作者提供实物视频；配置与官方产品不同。 **DIY / Raspberry Pi** · `hardware-demo-reported` · [来源](https://github.com/AI-FanGe/Microduck-build-tutorial) · 2026-09-16.
 - [Microduck replica](https://github.com/fanhao375/microduck-replica) — 逆向结构、电控与装机记录；需区分舵机版本及当前完成状态。 **CAD / electronics / DIY** · `experimental` · [来源](https://github.com/fanhao375/microduck-replica) · 2026-09-16.
 <!-- RESOURCES:END -->

@@ -12,6 +12,13 @@ English · [简体中文](README.zh-CN.md) · [Start here](docs/getting-started.
 
 ## 🆕 What's new
 
+### 2026-09-21
+
+- 📱 Reviewed official **[daemon v0.14.1](https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.14.1)** — phone controls can now stand the robot up and start a policy; v0.14.0 also moved the MuJoCo twin onto the real runtime daemons.
+- 🌐 Added **[Microduck Web](https://github.com/TonyRuan/microduck-web)** — a community browser simulator with touch controls and ONNX policy import; it does not control hardware.
+- 📚 Added **[OpenMicroDuck](https://github.com/SaberOnGo/open-microduck)** — a bilingual learning and research guide that separates official facts, community reconstruction and unresolved questions.
+- 🧰 Added **[Fanduck](https://github.com/7757/fanduck)** — a completed community replica with author-published hardware footage and packaged build files; check its non-commercial model terms.
+
 ### 2026-09-16
 
 - 🧠 Added **[microduck-mcp](https://github.com/joeynyc/microduck-mcp)** — an agent interface with mock and simulation support; real-device transports remain hardware-unverified.
@@ -52,7 +59,7 @@ Keep catalog generation in sync when introducing a category. -->
 ### Official
 
 - [Microduck RL](https://github.com/pollen-robotics/microduck_rl) — Official training workspace; begin with its requirements and live task registry. **CUDA** · `official` · [Source](https://github.com/pollen-robotics/microduck_rl) · 2026-09-16.
-- [Microduck runtime](https://github.com/pollen-robotics/microduck) — Start here for robot software and operator documentation. **Robot / simulation** · `official` · [Source](https://github.com/pollen-robotics/microduck) · 2026-09-16.
+- [Microduck runtime](https://github.com/pollen-robotics/microduck) — Official runtime and operator docs; stable v0.14.1 adds phone stand-up and policy-start control. **Robot / simulation** · `official` · [Source](https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.14.1) · 2026-09-21.
 - [Microduck Sandbox](https://huggingface.co/spaces/pollen-robotics/microduck-simulator) — Try the hosted simulator before choosing a local setup. **Browser** · `official` · [Source](https://huggingface.co/spaces/pollen-robotics/microduck-simulator) · 2026-09-16.
 - [Official policy files](https://huggingface.co/pollen-robotics/microduck-policies) — Find published weights; check the runtime manifest contract before integration. **ONNX** · `official` · [Source](https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md) · 2026-09-16.
 
@@ -60,9 +67,11 @@ Keep catalog generation in sync when introducing a category. -->
 ### Documentation
 
 - [Documentation index](https://github.com/pollen-robotics/microduck/blob/main/docs/README.md) — Find the relevant operator or developer guide. **Reading** · `official` · [Source](https://github.com/pollen-robotics/microduck/blob/main/docs/README.md) · 2026-09-16.
+- [Official daemon releases](https://github.com/pollen-robotics/microduck/releases) — Track stable daemon releases separately from signed development builds. **Reading / release artifacts** · `official` · [Source](https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.14.1) · 2026-09-21.
+- [OpenMicroDuck](https://github.com/SaberOnGo/open-microduck) — Community guide spanning simulation, training and DIY research; keep its source labels and unresolved hardware questions in view. **Bilingual guide** · `experimental` · [Source](https://github.com/SaberOnGo/open-microduck) · 2026-09-21.
 - [Policy manifest reference](https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md) — Check policy metadata and compatibility requirements. **Reading** · `official` · [Source](https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md) · 2026-09-16.
 - [Robot command reference](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/cheatsheet.md) — Look up commands for the installed runtime version. **Reading** · `official` · [Source](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/cheatsheet.md) · 2026-09-16.
-- [Runtime simulation guide](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md) — Follow the upstream setup for testing the runtime in simulation. **Reading** · `official` · [Source](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md) · 2026-09-16.
+- [Runtime simulation guide](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md) — Run the real runtime daemons against MuJoCo bodies; physical buses and device drivers remain outside the simulation. **Reading** · `official` · [Source](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/simulation.md) · 2026-09-21.
 
 <a id="simulation-and-training"></a>
 ### Simulation and training
@@ -71,6 +80,7 @@ Keep catalog generation in sync when introducing a category. -->
 - [Microduck Lab](https://github.com/jonathanhawkins/microduck-lab) — Mac-oriented reward experiments with a browser viewer; community implementation. **Apple Silicon / CPU** · `simulation-reported` · [Source](https://github.com/jonathanhawkins/microduck-lab) · 2026-09-16.
 - [Microduck RL on Genesis](https://github.com/Macmachi/microduck-rl-genesis) — An AMD-oriented training alternative; follow its tested configuration. **Linux / AMD ROCm** · `simulation-reported` · [Source](https://github.com/Macmachi/microduck-rl-genesis) · 2026-09-16.
 - [MicroDuck ROS 2 + Isaac Sim](https://github.com/osrbot/microduck-ros2-isaac) — Start with the RViz path; use the separate Isaac tutorials when needed. **ROS 2 Jazzy / optional Isaac Sim** · `simulation-reported` · [Source](https://github.com/osrbot/microduck-ros2-isaac) · 2026-09-16.
+- [Microduck Web](https://github.com/TonyRuan/microduck-web) — Community MuJoCo and ONNX simulator with touch controls and policy import; it does not control physical hardware. **Browser / mobile / offline cache** · `simulation-reported` · [Source](https://github.com/TonyRuan/microduck-web) · 2026-09-21.
 - [microduck-rl-torch](https://github.com/bsprenger/microduck-rl-torch) — Explore a portable PyTorch implementation; check backend limitations first. **PyTorch / CPU / GPU** · `experimental` · [Source](https://github.com/bsprenger/microduck-rl-torch) · 2026-09-16.
 
 <a id="policy-experiments"></a>
@@ -87,6 +97,7 @@ Keep catalog generation in sync when introducing a category. -->
 <a id="hardware-and-diy"></a>
 ### Hardware and DIY
 
+- [Fanduck](https://github.com/7757/fanduck) — Completed community replica with author-published hardware footage and packaged BOM, print and board files; review the non-commercial model terms. **DIY / CAD / PCB** · `hardware-demo-reported` · [Source](https://github.com/7757/fanduck) · 2026-09-21.
 - [Microduck build tutorial](https://github.com/AI-FanGe/Microduck-build-tutorial) — Chinese assembly and setup guide with author-published hardware clips; its configuration differs from the official product. **DIY / Raspberry Pi** · `hardware-demo-reported` · [Source](https://github.com/AI-FanGe/Microduck-build-tutorial) · 2026-09-16.
 - [Microduck replica](https://github.com/fanhao375/microduck-replica) — Reconstruction notes and build logs; check the specific actuator variant and current completion status. **CAD / electronics / DIY** · `experimental` · [Source](https://github.com/fanhao375/microduck-replica) · 2026-09-16.
 <!-- RESOURCES:END -->

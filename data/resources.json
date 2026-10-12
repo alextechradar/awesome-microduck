@@ -9,11 +9,11 @@
       "environment": "Robot / simulation",
       "status": "official",
       "description": {
-        "en": "Official runtime and operator docs; stable v0.14.1 adds phone stand-up and policy-start control.",
-        "zh": "官方运行时与操作文档；稳定版 v0.14.1 增加手机起立与策略启动控制。"
+        "en": "Official runtime and operator docs; stable v0.16.1 adds beta-board IMU, NFC, camera and LED support, battery display and sit-on-gamepad-dropout behavior.",
+        "zh": "官方运行时与操作文档；稳定版 v0.16.1 增加 beta 板 IMU、NFC、摄像头与 LED 支持、电池显示，以及手柄断连后坐下的行为。"
       },
-      "source_url": "https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.14.1",
-      "reviewed_at": "2026-09-21",
+      "source_url": "https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.16.1",
+      "reviewed_at": "2026-10-12",
       "verification": "source-reviewed"
     },
     {
@@ -24,11 +24,11 @@
       "environment": "CUDA",
       "status": "official",
       "description": {
-        "en": "Official training workspace; begin with its requirements and live task registry.",
-        "zh": "官方训练工程；先检查环境要求与实时任务列表。"
+        "en": "Official CUDA training workspace with v7 lineage and Hub publishing; bundled STL meshes are CC BY-NC-SA 4.0 while the remaining files stay Apache-2.0.",
+        "zh": "官方 CUDA 训练工程，含 v7 训练谱系与 Hub 发布流程；内含 STL 网格采用 CC BY-NC-SA 4.0，其余文件保持 Apache-2.0。"
       },
-      "source_url": "https://github.com/pollen-robotics/microduck_rl",
-      "reviewed_at": "2026-09-16",
+      "source_url": "https://github.com/pollen-robotics/microduck_rl/commit/7cc1961674f78d4fca7064fde715e0c9bcd7b9c4",
+      "reviewed_at": "2026-10-12",
       "verification": "source-reviewed"
     },
     {
@@ -54,11 +54,11 @@
       "environment": "ONNX",
       "status": "official",
       "description": {
-        "en": "Find published weights; check the runtime manifest contract before integration.",
-        "zh": "查找已发布权重；接入前对照运行时的 manifest 契约。"
+        "en": "Official v7 ONNX set; authors report real-robot validation for safer seated head moves and standing roll/pitch control, while crouch remains unlearned.",
+        "zh": "官方 v7 ONNX 策略集；作者报告已在真机验证坐姿头部动作稳定性与站立横滚/俯仰控制，但下蹲仍未学会。"
       },
-      "source_url": "https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md",
-      "reviewed_at": "2026-09-16",
+      "source_url": "https://huggingface.co/pollen-robotics/microduck-policies/tree/v7",
+      "reviewed_at": "2026-10-08",
       "verification": "source-reviewed"
     },
     {
@@ -102,8 +102,8 @@
         "en": "Track stable daemon releases separately from signed development builds.",
         "zh": "跟踪稳定版 daemon，并与签名开发构建区分。"
       },
-      "source_url": "https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.14.1",
-      "reviewed_at": "2026-09-21",
+      "source_url": "https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.16.1",
+      "reviewed_at": "2026-10-12",
       "verification": "source-reviewed"
     },
     {
@@ -159,11 +159,11 @@
       "environment": "Apple Silicon / CPU",
       "status": "simulation-reported",
       "description": {
-        "en": "Mac-oriented reward experiments with a browser viewer; community implementation.",
-        "zh": "面向 Mac 的奖励设计实验与浏览器可视化；社区实现。"
+        "en": "Apple Silicon and CPU training lab with browser worlds, multi-duck soccer and tidying behaviors; all reviewed results remain simulation-only.",
+        "zh": "面向 Apple Silicon 与 CPU 的训练实验室，含浏览器世界、多鸭足球和整理行为；本次核验结果仍仅限仿真。"
       },
-      "source_url": "https://github.com/jonathanhawkins/microduck-lab",
-      "reviewed_at": "2026-09-16",
+      "source_url": "https://github.com/jonathanhawkins/microduck-lab/commit/bbf0326",
+      "reviewed_at": "2026-10-08",
       "verification": "source-reviewed"
     },
     {
@@ -219,11 +219,11 @@
       "environment": "ROS 2 Jazzy / optional Isaac Sim",
       "status": "simulation-reported",
       "description": {
-        "en": "Start with the RViz path; use the separate Isaac tutorials when needed.",
-        "zh": "可先走 RViz 路线，再按需学习 Isaac 教程。"
+        "en": "ROS 2 Jazzy viewer and Isaac Sim/Lab tutorials now pin the official v7 policies; the converted USD and GPU playback still await revalidation, and there is no physical driver.",
+        "zh": "ROS 2 Jazzy 查看器与 Isaac Sim/Lab 教程现已固定官方 v7 策略；转换后的 USD 与 GPU 回放仍待复验，且不含真机驱动。"
       },
-      "source_url": "https://github.com/osrbot/microduck-ros2-isaac",
-      "reviewed_at": "2026-09-16",
+      "source_url": "https://github.com/osrbot/microduck-ros2-isaac/commit/2adc4b157fc732d4751ad97577e4ea39bd727abd",
+      "reviewed_at": "2026-10-12",
       "verification": "source-reviewed"
     },
     {
@@ -249,11 +249,26 @@
       "environment": "Simulation",
       "status": "simulation-reported",
       "description": {
-        "en": "Browse experiment write-ups and their associated policy demonstrations.",
-        "zh": "阅读实验记录与对应策略演示，区分演示条件和部署条件。"
+        "en": "Reproducible simulations cover chimney climbing, a raised-platform long jump and a backflip with published policies; hardware remains untested and the backflip carries a breakage warning.",
+        "zh": "可复现仿真涵盖烟囱攀爬、高台长跳与后空翻并发布策略；真机仍未测试，后空翻明确提示可能损坏机器人。"
       },
-      "source_url": "https://github.com/Vottivott/microduck-playground",
-      "reviewed_at": "2026-09-16",
+      "source_url": "https://github.com/Vottivott/microduck-playground/commit/f010ef1",
+      "reviewed_at": "2026-10-08",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "duckkit",
+      "name": "DuckKit",
+      "url": "https://github.com/craigm26/duckkit",
+      "category": "tools",
+      "environment": "Swift / Linux / Apple",
+      "status": "experimental",
+      "description": {
+        "en": "Zero-dependency Swift implementation of the policy, observation, kinematics and RPC contracts; author reports 347 offline tests but no hardware validation.",
+        "zh": "以零依赖 Swift 实现策略、观测、运动学与 RPC 契约；作者报告 347 项离线测试，但尚无真机验证。"
+      },
+      "source_url": "https://github.com/craigm26/duckkit/releases/tag/v1.37.0",
+      "reviewed_at": "2026-10-08",
       "verification": "source-reviewed"
     },
     {
@@ -287,6 +302,21 @@
       "verification": "source-reviewed"
     },
     {
+      "id": "quackd",
+      "name": "quackd",
+      "url": "https://github.com/rokbenko/quackd",
+      "category": "tools",
+      "environment": "Python 3.12 / mock / MuJoCo / MCP",
+      "status": "hardware-unverified",
+      "description": {
+        "en": "Goal-directed robot CLI and MCP bridge with Microduck mock and MuJoCo paths; its JSON-RPC hardware backend has only pinned-name fake validation.",
+        "zh": "面向目标任务的机器人 CLI 与 MCP 桥接，支持 Microduck mock 和 MuJoCo；其 JSON-RPC 真机后端仅做过固定上游名称的伪实现验证。"
+      },
+      "source_url": "https://github.com/rokbenko/quackd/releases/tag/v0.17.1",
+      "reviewed_at": "2026-10-08",
+      "verification": "source-reviewed"
+    },
+    {
       "id": "build",
       "name": "Microduck build tutorial",
       "url": "https://github.com/AI-FanGe/Microduck-build-tutorial",
@@ -302,18 +332,48 @@
       "verification": "source-reviewed"
     },
     {
+      "id": "jetson-mount",
+      "name": "MicroDuck Jetson Orin Nano mount",
+      "url": "https://github.com/adammong/microduck-jetson-mount",
+      "category": "hardware",
+      "environment": "CAD / MuJoCo / Jetson Orin Nano",
+      "status": "simulation-reported",
+      "description": {
+        "en": "Parametric external-compute mount with printable CAD and reproducible payload-policy studies; fit, strength and control results remain simulation-only.",
+        "zh": "面向外置算力的参数化挂载方案，提供可打印 CAD 与可复现的载荷策略研究；适配、强度和控制结果仍仅限仿真。"
+      },
+      "source_url": "https://github.com/adammong/microduck-jetson-mount/commit/8d361ceae40c8474e43468bfbd2d311344387fa1",
+      "reviewed_at": "2026-10-12",
+      "verification": "source-reviewed"
+    },
+    {
       "id": "replica",
       "name": "Microduck replica",
       "url": "https://github.com/fanhao375/microduck-replica",
       "category": "hardware",
       "environment": "CAD / electronics / DIY",
-      "status": "experimental",
+      "status": "hardware-demo-reported",
       "description": {
-        "en": "Reconstruction notes and build logs; check the specific actuator variant and current completion status.",
-        "zh": "逆向结构、电控与装机记录；需区分舵机版本及当前完成状态。"
+        "en": "The HD-1910 build now reports a BNO085, 15-servo control loop, HOME and a 10-second policy hold on hardware; continuous walking remains unverified after thermal throttling.",
+        "zh": "HD-1910 复刻现已在真机跑通 BNO085、15 舵机控制环、HOME 与 10 秒策略保持；因过热降频，连续行走仍未验证。"
       },
-      "source_url": "https://github.com/fanhao375/microduck-replica",
-      "reviewed_at": "2026-09-16",
+      "source_url": "https://github.com/fanhao375/microduck-replica/commit/75c2b4b3249a8a4a17e29dabb872ebb465c393f9",
+      "reviewed_at": "2026-10-12",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "xgo-duck",
+      "name": "XGO Duck",
+      "url": "https://github.com/LuwuDynamics/xgoduck_hardware",
+      "category": "hardware",
+      "environment": "DIY / Arduino Uno Q / Feetech 1910",
+      "status": "hardware-demo-reported",
+      "description": {
+        "en": "Arduino Uno Q adaptation with author hardware demos; pre-2026-10-02 boards require a documented U3, U4 and U5 GND/signal wiring check before power-up.",
+        "zh": "基于 Arduino Uno Q 且有作者实机演示；2026-10-02 前生产的板卡上电前需按文档核对 U3、U4、U5 的 GND/信号线。"
+      },
+      "source_url": "https://github.com/LuwuDynamics/xgoduck_hardware/blob/63b1c45/PCBA/README.md",
+      "reviewed_at": "2026-10-08",
       "verification": "source-reviewed"
     },
     {

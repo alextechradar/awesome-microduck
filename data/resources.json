@@ -9,11 +9,26 @@
       "environment": "Robot / simulation",
       "status": "official",
       "description": {
-        "en": "Official runtime and operator docs; stable v0.16.1 adds beta-board IMU, NFC, camera and LED support, battery display and sit-on-gamepad-dropout behavior.",
-        "zh": "官方运行时与操作文档；稳定版 v0.16.1 增加 beta 板 IMU、NFC、摄像头与 LED 支持、电池显示，以及手柄断连后坐下的行为。"
+        "en": "Official runtime and operator docs; stable v0.17.7–v0.18.3 adds safer fall handling, weak-link camera adaptation, beta-camera calibration, pad reconnection, faster boot checks, opt-in vetbook sharing and anonymous telemetry with an opt-out.",
+        "zh": "官方运行时与操作文档；稳定版 v0.17.7–v0.18.3 新增更安全的跌倒处理、弱网摄像头自适应、beta 摄像头标定、手柄重连、加快启动检查、可选健康档案分享，以及可退出的匿名遥测。"
       },
-      "source_url": "https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.16.1",
-      "reviewed_at": "2026-10-12",
+      "source_url": "https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.18.3",
+      "reviewed_at": "2026-11-02",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "os",
+      "name": "Microduck OS",
+      "url": "https://github.com/pollen-robotics/microduck_yocto",
+      "category": "official",
+      "environment": "Radxa Zero 3W / Yocto / RK3566",
+      "status": "official",
+      "description": {
+        "en": "Official production image; v1.1.0 ships the gamepad and NFC daemons, preserves Bluetooth bonds across slot updates, improves install filtering and verifies the V1.0 face-board LED mapping; the new factory flashing guide is not yet end-to-end board-validated.",
+        "zh": "官方生产镜像；v1.1.0 随镜像提供手柄与 NFC 守护进程，在分区切换更新后保留蓝牙配对，改进可安装版本筛选，并逐灯验证 V1.0 面板映射；新工厂刷写指南尚未在板卡上完整走通。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck_yocto/releases/tag/microduck-os-v1.1.0",
+      "reviewed_at": "2026-11-02",
       "verification": "source-reviewed"
     },
     {
@@ -24,11 +39,11 @@
       "environment": "CUDA",
       "status": "official",
       "description": {
-        "en": "Official CUDA training workspace with v7 lineage and Hub publishing; bundled STL meshes are CC BY-NC-SA 4.0 while the remaining files stay Apache-2.0.",
-        "zh": "官方 CUDA 训练工程，含 v7 训练谱系与 Hub 发布流程；内含 STL 网格采用 CC BY-NC-SA 4.0，其余文件保持 Apache-2.0。"
+        "en": "Official CUDA training workspace with v8 lineage and author-reported hardware validation; it now supports opt-in Hub bundles containing full checkpoints, provenance and distillation teachers for resuming or warm-starting training.",
+        "zh": "官方 CUDA 训练工程，含 v8 谱系与作者报告的真机验证；现支持选择性发布 Hub 训练包，包含完整检查点、来源记录和蒸馏教师，可用于续训或热启动。"
       },
-      "source_url": "https://github.com/pollen-robotics/microduck_rl/commit/7cc1961674f78d4fca7064fde715e0c9bcd7b9c4",
-      "reviewed_at": "2026-10-12",
+      "source_url": "https://github.com/pollen-robotics/microduck_rl/commit/3b8759e9dad2bd12dae03129bc4a07fe24a48026",
+      "reviewed_at": "2026-11-02",
       "verification": "source-reviewed"
     },
     {
@@ -54,11 +69,11 @@
       "environment": "ONNX",
       "status": "official",
       "description": {
-        "en": "Official v7 ONNX set; authors report real-robot validation for safer seated head moves and standing roll/pitch control, while crouch remains unlearned.",
-        "zh": "官方 v7 ONNX 策略集；作者报告已在真机验证坐姿头部动作稳定性与站立横滚/俯仰控制，但下蹲仍未学会。"
+        "en": "Official v8 ONNX set; authors report real-robot validation for smoother, more reliable get-up and tracked yaw commands, building on v7 standing roll and pitch control.",
+        "zh": "官方 v8 ONNX 策略集；作者报告已在真机验证更平顺可靠的起身和偏航指令跟踪，并延续 v7 的站立横滚与俯仰控制。"
       },
-      "source_url": "https://huggingface.co/pollen-robotics/microduck-policies/tree/v7",
-      "reviewed_at": "2026-10-08",
+      "source_url": "https://huggingface.co/pollen-robotics/microduck-policies/tree/v8",
+      "reviewed_at": "2026-10-19",
       "verification": "source-reviewed"
     },
     {
@@ -102,8 +117,8 @@
         "en": "Track stable daemon releases separately from signed development builds.",
         "zh": "跟踪稳定版 daemon，并与签名开发构建区分。"
       },
-      "source_url": "https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.16.1",
-      "reviewed_at": "2026-10-12",
+      "source_url": "https://github.com/pollen-robotics/microduck/releases/tag/daemon-v0.18.3",
+      "reviewed_at": "2026-11-02",
       "verification": "source-reviewed"
     },
     {
@@ -149,6 +164,36 @@
       },
       "source_url": "https://github.com/pollen-robotics/microduck/blob/main/docs/policy-manifest.md",
       "reviewed_at": "2026-09-16",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "arena",
+      "name": "Microduck Arena",
+      "url": "https://huggingface.co/spaces/pollen-robotics/microduck-arena",
+      "category": "simulation",
+      "environment": "Browser / local / ONNX",
+      "status": "official",
+      "description": {
+        "en": "Official reproducible policy competition with fixed server-side courses and downloadable entries; v0.7.0 adds Tug of War and the six-metre red-light/green-light Sock Heist challenge.",
+        "zh": "官方可复现策略竞赛平台，使用固定服务端赛道并支持下载参赛策略；v0.7.0 新增拔河与六米红绿灯玩法 Sock Heist。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck-arena/releases/tag/v0.7.0",
+      "reviewed_at": "2026-11-02",
+      "verification": "source-reviewed"
+    },
+    {
+      "id": "challenges",
+      "name": "Microduck challenges",
+      "url": "https://github.com/pollen-robotics/microduck-challenges",
+      "category": "simulation",
+      "environment": "Python 3.12 / CUDA or Hugging Face Jobs",
+      "status": "official",
+      "description": {
+        "en": "Official public training folders and workshop for six Arena events, including Tug of War and Sock Heist, with checkpoint evaluation and publish-to-Arena workflows; scores are simulation evidence only.",
+        "zh": "官方公开的六项 Arena 赛事训练目录与工作坊，新增拔河与 Sock Heist，支持检查点评测及发布到 Arena；成绩仅属于仿真证据。"
+      },
+      "source_url": "https://github.com/pollen-robotics/microduck-challenges/commit/5cee942d8b434aafd395070facb659034aac3b5e",
+      "reviewed_at": "2026-11-02",
       "verification": "source-reviewed"
     },
     {
@@ -257,6 +302,21 @@
       "verification": "source-reviewed"
     },
     {
+      "id": "training-journal",
+      "name": "my-microduck-journal",
+      "url": "https://github.com/xinhuagu/my-microduck-journal",
+      "category": "policies",
+      "environment": "CUDA / WSL2 / ONNX",
+      "status": "simulation-reported",
+      "description": {
+        "en": "Consumer-GPU training journal with released ONNX policies, patches, raw multi-seed evaluation data and checksums; its v0.2 speed and recovery results are author-reported simulations without hardware validation.",
+        "zh": "面向消费级 GPU 的训练记录，已发布 ONNX 策略、补丁、多随机种子原始评测数据与校验和；v0.2 的速度和恢复结果为作者报告的仿真数据，尚无真机验证。"
+      },
+      "source_url": "https://github.com/xinhuagu/my-microduck-journal/releases/tag/v0.2",
+      "reviewed_at": "2026-10-19",
+      "verification": "source-reviewed"
+    },
+    {
       "id": "duckkit",
       "name": "DuckKit",
       "url": "https://github.com/craigm26/duckkit",
@@ -309,11 +369,11 @@
       "environment": "Python 3.12 / mock / MuJoCo / MCP",
       "status": "hardware-unverified",
       "description": {
-        "en": "Goal-directed robot CLI and MCP bridge with Microduck mock and MuJoCo paths; its JSON-RPC hardware backend has only pinned-name fake validation.",
-        "zh": "面向目标任务的机器人 CLI 与 MCP 桥接，支持 Microduck mock 和 MuJoCo；其 JSON-RPC 真机后端仅做过固定上游名称的伪实现验证。"
+        "en": "Goal-directed robot CLI, browser UI and MCP bridge with mock and MuJoCo paths; v0.29.1 adds vision, head tracking and simulated room exploration, while the maintainer still reports no Microduck hardware run.",
+        "zh": "面向目标任务的机器人 CLI、浏览器界面与 MCP 桥接，支持 mock 和 MuJoCo；v0.29.1 已加入视觉、头部跟踪与仿真房间探索，但维护者仍说明尚无 Microduck 真机运行。"
       },
-      "source_url": "https://github.com/rokbenko/quackd/releases/tag/v0.17.1",
-      "reviewed_at": "2026-10-08",
+      "source_url": "https://github.com/rokbenko/quackd/releases/tag/v0.29.1",
+      "reviewed_at": "2026-11-02",
       "verification": "source-reviewed"
     },
     {
@@ -332,6 +392,21 @@
       "verification": "source-reviewed"
     },
     {
+      "id": "duckbuddy",
+      "name": "DuckBuddy",
+      "url": "https://github.com/Animan-AI/DuckBuddy",
+      "category": "hardware",
+      "environment": "DIY / Orange Pi Zero 3W / Feetech HL-2915",
+      "status": "hardware-demo-reported",
+      "description": {
+        "en": "Open hardware and software fork with published boards, firmware, training code and an author hardware demo of offline voice-triggered action sequences; the HL-2915 build is in daily use, while HD-1910, on-device VLM and localization remain unfinished.",
+        "zh": "开放硬件与软件分支，公开板卡、固件、训练代码及作者实机离线语音连续动作演示；HL-2915 版本已日常使用，HD-1910、端侧 VLM 与定位仍未完成。"
+      },
+      "source_url": "https://github.com/Animan-AI/DuckBuddy/commit/933c6d9547cfd0e5cd06c805bc406bf394ba6ca3",
+      "reviewed_at": "2026-11-02",
+      "verification": "source-reviewed"
+    },
+    {
       "id": "jetson-mount",
       "name": "MicroDuck Jetson Orin Nano mount",
       "url": "https://github.com/adammong/microduck-jetson-mount",
@@ -347,6 +422,21 @@
       "verification": "source-reviewed"
     },
     {
+      "id": "kissqy",
+      "name": "Microduck-kissqy",
+      "url": "https://github.com/kissqy/Microduck-kissqy",
+      "category": "hardware",
+      "environment": "DIY / Radxa Zero 3W / Feetech HD-1910",
+      "status": "hardware-demo-reported",
+      "description": {
+        "en": "HD-1910 build stack with published HAT and IMU files, print set, firmware, control and training consoles, a tested R1 system image and author hardware videos; calibration is required and original additions are non-commercial.",
+        "zh": "HD-1910 构建栈，公开 HAT 与 IMU 文件、打印件、固件、机器人及训练中控、已刷卡测试的 R1 镜像和作者实机视频；仍需逐机标定，原创新增部分限非商业使用。"
+      },
+      "source_url": "https://github.com/kissqy/Microduck-kissqy/commit/f02e875e73b88bf8ec7d5bbb34d0b461ac83b010",
+      "reviewed_at": "2026-10-19",
+      "verification": "source-reviewed"
+    },
+    {
       "id": "replica",
       "name": "Microduck replica",
       "url": "https://github.com/fanhao375/microduck-replica",
@@ -354,11 +444,11 @@
       "environment": "CAD / electronics / DIY",
       "status": "hardware-demo-reported",
       "description": {
-        "en": "The HD-1910 build now reports a BNO085, 15-servo control loop, HOME and a 10-second policy hold on hardware; continuous walking remains unverified after thermal throttling.",
-        "zh": "HD-1910 复刻现已在真机跑通 BNO085、15 舵机控制环、HOME 与 10 秒策略保持；因过热降频，连续行走仍未验证。"
+        "en": "The HD-1910 build reports sustained walking and now ships signed browser updates, local sit/stand voice control, model management and diagnostics; the 2026-10-31 driver, new image combinations and Qinmo IMU path still have explicit hardware-acceptance gaps.",
+        "zh": "HD-1910 复刻已报告持续行走，并提供签名网页更新、本地坐站语音、模型管理与诊断；2026-10-31 手柄驱动、新镜像组合及秦墨 IMU 路线仍有明确的实物验收缺口。"
       },
-      "source_url": "https://github.com/fanhao375/microduck-replica/commit/75c2b4b3249a8a4a17e29dabb872ebb465c393f9",
-      "reviewed_at": "2026-10-12",
+      "source_url": "https://github.com/fanhao375/microduck-replica/releases/tag/microduck-software-v2026.10.31",
+      "reviewed_at": "2026-11-02",
       "verification": "source-reviewed"
     },
     {
@@ -369,11 +459,11 @@
       "environment": "DIY / Arduino Uno Q / Feetech 1910",
       "status": "hardware-demo-reported",
       "description": {
-        "en": "Arduino Uno Q adaptation with author hardware demos; pre-2026-10-02 boards require a documented U3, U4 and U5 GND/signal wiring check before power-up.",
-        "zh": "基于 Arduino Uno Q 且有作者实机演示；2026-10-02 前生产的板卡上电前需按文档核对 U3、U4、U5 的 GND/信号线。"
+        "en": "Arduino Uno Q adaptation with author hardware demos; V1.1 publishes manufacturing files plus reverse-connection and servo-stall test videos, but omits the V1.1 PCB source and compatibility notes, and older boards still require the documented wiring check.",
+        "zh": "基于 Arduino Uno Q 且有作者实机演示；V1.1 已公开生产文件及反接、堵转测试视频，但缺少 V1.1 PCB 源文件与兼容说明，旧板仍须按文档核对接线。"
       },
-      "source_url": "https://github.com/LuwuDynamics/xgoduck_hardware/blob/63b1c45/PCBA/README.md",
-      "reviewed_at": "2026-10-08",
+      "source_url": "https://github.com/LuwuDynamics/xgoduck_hardware/commit/7dd33c603cbff92bc4afbc7f318abd4ccd9127b6",
+      "reviewed_at": "2026-11-02",
       "verification": "source-reviewed"
     },
     {

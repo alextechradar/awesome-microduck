@@ -34,6 +34,10 @@ uv run list-envs
 
 训练、评估和导出命令以实际 checkout 版本为准。至少保存 commit、配置、随机种子与评估结果；奖励升高并不直接说明目标动作完成。
 
+For a fixed simulation benchmark, use the official [Microduck challenges](https://github.com/pollen-robotics/microduck-challenges) and [Arena](https://huggingface.co/spaces/pollen-robotics/microduck-arena). Arena scores compare policies in its declared environment; they do not establish physical-robot behavior.
+
+如需固定仿真基准，可使用官方 [Microduck challenges](https://github.com/pollen-robotics/microduck-challenges) 与 [Arena](https://huggingface.co/spaces/pollen-robotics/microduck-arena)。Arena 成绩只比较其声明环境中的策略，不代表实体机器人表现。
+
 ## 4. AMD or ROS / 替代仿真路线
 
 For AMD Linux, review the [Genesis port](https://github.com/Macmachi/microduck-rl-genesis) and its tested configuration. For ROS 2, start with [RViz](https://github.com/osrbot/microduck-ros2-isaac); the project's initial ROS path does not require Isaac Sim.
